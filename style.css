@@ -1,0 +1,37 @@
+* { padding: 0; margin: 0; box-sizing: border-box; touch-action: manipulation; }
+body { display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: "Quicksand", sans-serif; overflow: hidden; transition: background-color 1s ease; background-color: #000; }
+
+/* Blocks watermark completely with solid background */
+#lock-screen { 
+    position: fixed; inset: 0; background: #000 !important; z-index: 99999 !important; 
+    display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; 
+}
+#pass-input { padding: 12px; margin: 20px 0; border-radius: 5px; border: none; text-align: center; font-size: 18px; width: 200px; }
+
+.gotham-sky { position: fixed; inset: 0; z-index: -1; }
+
+/* Sharp Heart - Blur Removed */
+.bat-signal-heart { 
+    position: absolute; top: 10%; left: 50%; width: 60px; height: 60px; 
+    transform: translateX(-50%) rotate(-45deg); opacity: 0; transition: 1s;
+}
+.bat-signal-heart::before, .bat-signal-heart::after { content: ""; position: absolute; width: 60px; height: 60px; background-color: inherit; border-radius: 50%; }
+.bat-signal-heart::before { top: -30px; left: 0; }
+.bat-signal-heart::after { top: 0; left: 30px; }
+
+.container { text-align: center; width: 90%; max-width: 500px; z-index: 10; position: absolute; }
+.question { font-size: 1.6rem; margin-bottom: 1.5rem; font-weight: 700; transition: color 0.5s; }
+
+/* Optimal Button Container for Mobile */
+.button-container { display: flex !important; justify-content: center !important; gap: 1.2rem; flex-wrap: wrap; min-height: 150px; }
+
+/* Optimal Button Dimensions */
+.btn { 
+    min-width: 120px; padding: 14px 28px; border: 2px solid #f1c40f; border-radius: 8px; 
+    font-family: 'Bebas Neue', cursive; font-size: 22px; cursor: pointer; 
+    background: #1a1a1a; color: #f1c40f; text-transform: uppercase; 
+}
+
+.no-btn { position: relative; z-index: 1000; transition: left 0.15s ease, top 0.15s ease; white-space: nowrap; }
+.result-container { display: none; }
+.gif-result, .local-gif { width: 100%; max-width: 260px; border-radius: 12px; margin-bottom: 1rem; display: block; margin: 0 auto; }
