@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Quicksand:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encrypted Message</title>
+</head>
+<body>
+
+<div id="lock-screen">
+    <div class="lock-content">
+        <h2 class="bat-font">Access Restricted</h2>
+        <p>Enter Authentication Code</p>
+        <input type="password" id="pass-input" placeholder="CODE: 3SV">
+        <button class="btn" onclick="checkPass()">Unlock</button>
+        <p id="pass-error" style="display: none; color: #ff4757; margin-top: 10px;">Invalid Access Code</p>
+    </div>
+</div>
+
+<div class="gotham-sky">
+    <div class="bat-signal-heart"></div>
+</div>
+
+<div class="choice-container container" style="display: none;">
+    <h2 class="question">Pick your vibe...</h2>
+    <div class="button-container">
+        <button class="btn choice-btn" onclick="setMode('cat')">The Cat & Bat</button>
+        <button class="btn choice-btn" onclick="setMode('valentine')">Valentine</button>
+    </div>
+</div>
+
+<div class="question-container container" style="display: none;">
+    <div id="media-placeholder"></div>
+    <h2 id="dynamic-question" class="question"></h2>
+    <div class="button-container">
+        <button class="yes-btn btn js-yes-btn">Yes</button>
+        <button class="no-btn btn js-no-btn">No</button>
+    </div>
+</div>
+
+<div class="result-container container">
+    <img class="gif-result" id="final-gif" src="" alt="Hearts">
+    <h2 id="result-text"></h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
